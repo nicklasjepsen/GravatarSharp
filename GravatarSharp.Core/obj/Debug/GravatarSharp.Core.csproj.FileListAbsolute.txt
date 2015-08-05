@@ -5,3 +5,10 @@ C:\Dev\SystemOut\GravatarSharp\GravatarSharp.Core\obj\Debug\GravatarSharp.Core.d
 C:\Dev\SystemOut\GravatarSharp\GravatarSharp.Core\obj\Debug\GravatarSharp.Core.pdb
 C:\Dev\SystemOut\GravatarSharp\GravatarSharp.Core\bin\Debug\Newtonsoft.Json.dll
 C:\Dev\SystemOut\GravatarSharp\GravatarSharp.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Dev\GravatarSharp\GravatarSharp.Core\bin\Debug\GravatarSharp.Core.dll
+C:\Dev\GravatarSharp\GravatarSharp.Core\bin\Debug\GravatarSharp.Core.pdb
+C:\Dev\GravatarSharp\GravatarSharp.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Dev\GravatarSharp\GravatarSharp.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Dev\GravatarSharp\GravatarSharp.Core\obj\Debug\GravatarSharp.Core.csprojResolveAssemblyReference.cache
+C:\Dev\GravatarSharp\GravatarSharp.Core\obj\Debug\GravatarSharp.Core.dll
+C:\Dev\GravatarSharp\GravatarSharp.Core\obj\Debug\GravatarSharp.Core.pdb
