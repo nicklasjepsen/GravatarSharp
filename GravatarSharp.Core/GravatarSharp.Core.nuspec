@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/nicklasjepsen/GravatarSharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>This is the very first release of this package.</releaseNotes>
+    <releaseNotes>A fix for wrong version number.</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>Gravatar</tags>
   </metadata>
