@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GravatarSharp.Wpf", "GravatarSharp.Wpf\GravatarSharp.Wpf.csproj", "{8CFBAB15-DC74-4CC6-9CB5-105E2153F5EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{313AF298-03C5-4E9C-B40D-438BE6CF153E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GravatarSharp.Core", "GravatarSharp.Core\GravatarSharp.Core.csproj", "{46444F40-EBB8-4DC0-B665-9315C22EAEEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CFBAB15-DC74-4CC6-9CB5-105E2153F5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CFBAB15-DC74-4CC6-9CB5-105E2153F5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CFBAB15-DC74-4CC6-9CB5-105E2153F5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CFBAB15-DC74-4CC6-9CB5-105E2153F5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313AF298-03C5-4E9C-B40D-438BE6CF153E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313AF298-03C5-4E9C-B40D-438BE6CF153E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313AF298-03C5-4E9C-B40D-438BE6CF153E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313AF298-03C5-4E9C-B40D-438BE6CF153E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46444F40-EBB8-4DC0-B665-9315C22EAEEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46444F40-EBB8-4DC0-B665-9315C22EAEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46444F40-EBB8-4DC0-B665-9315C22EAEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46444F40-EBB8-4DC0-B665-9315C22EAEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
