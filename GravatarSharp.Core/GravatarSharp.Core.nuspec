@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/nicklasjepsen/GravatarSharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Just some pratical changes - icon, license and stuff.</releaseNotes>
 	<licenseUrl>https://github.com/nicklasjepsen/GravatarSharp/blob/master/License.txt</licenseUrl>
     <copyright>Copyright 2015 Nicklas Møller Jepsen</copyright>
     <tags>Gravatar</tags>
