@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("GravatarSharp.Core")]
-[assembly: AssemblyDescription("A very simple API for interacting with Gravatar")]
+[assembly: AssemblyDescription("A very simple API to get a gravatar image from an email addres. Also provides the full user profile based on the email and enables the consumer to get a custom sized user image by calling a single method.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SystemOut")]
 [assembly: AssemblyProduct("GravatarSharp")]
