@@ -87,6 +87,7 @@ namespace GravatarSharp.Core.Model
                     Url = url.value
                 }).ToArray();
             }
+            //
         }
 
         private static bool TryConvertStringToBool(string input)
