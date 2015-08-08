@@ -260,3 +260,8 @@ FakesAssemblies/
 _Pvt_Extensions
 bin
 obj
+obj
+bin
+/UnitTestProject/obj
+/UnitTestProject/bin
+/*.suo
