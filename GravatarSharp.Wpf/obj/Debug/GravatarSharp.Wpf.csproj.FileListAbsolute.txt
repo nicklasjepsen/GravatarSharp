@@ -64,3 +64,4 @@ C:\Dev\GravatarSharp\GravatarSharp.Wpf\obj\Debug\GravatarSharp.Wpf_MarkupCompile
 C:\Dev\GravatarSharp\GravatarSharp.Wpf\obj\Debug\GravatarSharp.Wpf.g.resources
 C:\Dev\GravatarSharp\GravatarSharp.Wpf\obj\Debug\SystemOut.GravatarSharp.Wpf.Properties.Resources.resources
 C:\Dev\GravatarSharp\GravatarSharp.Wpf\obj\Debug\GravatarSharp.Wpf.csproj.GenerateResource.Cache
+C:\Dev\GravatarSharp\GravatarSharp.Wpf\bin\Debug\GravatarSharp.Core.xml

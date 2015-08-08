@@ -3,7 +3,7 @@ using System.Text;
 
 namespace GravatarSharp.Core
 {
-    public class Hashing
+    internal class Hashing
     {
         /// <summary>
         /// Calculate the hash based on this MSDN post: http://blogs.msdn.com/b/csharpfaq/archive/2006/10/09/how-do-i-calculate-a-md5-hash-from-a-string_3f00_.aspx

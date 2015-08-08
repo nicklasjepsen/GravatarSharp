@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace GravatarSharp.Core.Json
 {
-    public class SingleValueArrayConverter<T> : JsonConverter
+    internal class SingleValueArrayConverter<T> : JsonConverter
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {

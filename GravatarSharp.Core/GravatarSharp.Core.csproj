@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\GravatarSharp.Core.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -48,8 +49,10 @@
     <Compile Include="Hashing.cs" />
     <Compile Include="Json\GravatarConverter.cs" />
     <Compile Include="Json\Profile.cs" />
+    <Compile Include="Model\EmailAddress.cs" />
     <Compile Include="Model\GetProfileResult.cs" />
     <Compile Include="Model\GravatarProfile.cs" />
+    <Compile Include="Model\WebSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

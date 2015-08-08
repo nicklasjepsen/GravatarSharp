@@ -14,6 +14,9 @@ using Newtonsoft.Json;
 
 namespace GravatarSharp.Core
 {
+    /// <summary>
+    /// Get a Gravatar user profile and a Gravatar image url by using this class.
+    /// </summary>
     public class GravatarController
     {
         /// <summary>
