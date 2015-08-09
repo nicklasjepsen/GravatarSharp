@@ -265,3 +265,4 @@ bin
 /UnitTestProject/obj
 /UnitTestProject/bin
 /*.suo
+*.suo
