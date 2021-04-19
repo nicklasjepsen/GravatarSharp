@@ -3,6 +3,9 @@ using System.Text;
 
 namespace GravatarSharp.Core
 {
+    /// <summary>
+    /// Used to calculate the hash
+    /// </summary>
     public class Hashing
     {
         /// <summary>
