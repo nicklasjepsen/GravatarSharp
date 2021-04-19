@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using GravatarSharp.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -8,18 +9,9 @@ namespace UnitTestProject
     public class GravatarControllerUnitTest
     {
         [TestMethod]
-        public void TestGetUserAgent()
-        {
-            var controller = new GravatarController();
-            var expected =
-                $"GravatarSharp/1.0 ({Environment.OSVersion.Platform}; {Environment.OSVersion.VersionString})";
-            Assert.AreEqual(expected,controller.UserAgent);
-        }
-
-        [TestMethod]
         public void TestGetProfile()
         {
-            var controller = new GravatarController();
+            var controller = new GravatarController(new HttpClient());
 
             var profileResult = controller.GetProfile(TestCommon.Email).Result;
             Assert.AreEqual(profileResult.Profile.Id, "29792710");
@@ -37,7 +29,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestGetProfile_NotFound()
         {
-            var controller = new GravatarController();
+            var controller = new GravatarController(new HttpClient());
 
             var result = controller.GetProfile("").Result;
             Assert.IsFalse(string.IsNullOrEmpty(result.ErrorMessage));

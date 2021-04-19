@@ -14,10 +14,22 @@ namespace GravatarSharp.Core
     public class GravatarController
     {
         /// <summary>
-        ///     The user agent used in the HTTP request headers
+        /// The user agent used in the HTTP request headers
         /// </summary>
         public string UserAgent =>
             $"GravatarSharp/1.0 ({Environment.OSVersion.Platform}; {Environment.OSVersion.VersionString})";
+        private readonly HttpClient httpClient;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="httpClient">The HttpClient used to make the request to Gravatar.
+        /// Microsoft recommends NOT to dispose the HttpClient after every request, so please provide an instance of it.
+        /// For instance by using Dependency Injection: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-5.0#typed-clients</param>
+        public GravatarController(HttpClient httpClient)
+        {
+            this.httpClient = httpClient;
+        }
 
         /// <summary>
         ///     Gets the Gravatar profile for the given user/email
@@ -51,26 +63,28 @@ namespace GravatarSharp.Core
 
         private async Task<HttpStringResponse> GetStringResponse(string uri)
         {
-            using (var httpClient = new HttpClient())
+            try
             {
-                httpClient.DefaultRequestHeaders.Add("User-Agent", UserAgent);
-                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/html"));
-                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                try
+                var response = await httpClient.SendAsync(new HttpRequestMessage
                 {
-                    var result = await httpClient.GetStringAsync(uri);
-                    return new HttpStringResponse
+                    RequestUri = new Uri(uri),
+                    Headers =
                     {
-                        Result = result
-                    };
-                }
-                catch (HttpRequestException httpRequestException)
+                        {"User-Agent", UserAgent },
+                        {"Accept", "application/json"}
+                    }
+                });
+                return new HttpStringResponse
                 {
-                    return new HttpStringResponse
-                    {
-                        ErrorMessage = httpRequestException.Message
-                    };
-                }
+                    Result = await response.Content.ReadAsStringAsync()
+                };
+            }
+            catch (HttpRequestException httpRequestException)
+            {
+                return new HttpStringResponse
+                {
+                    ErrorMessage = httpRequestException.Message
+                };
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using GravatarSharp.Core;
@@ -17,7 +18,7 @@ namespace SystemOut.GravatarSharp.Wpf
 
         private async void GetUserProfileBtn_Click(object sender, RoutedEventArgs e)
         {
-            var controller = new GravatarController();
+            var controller = new GravatarController(new HttpClient());
             var profileResult = await controller.GetProfile(InputTextBox.Text);
             if (profileResult.Profile != null)
             {
