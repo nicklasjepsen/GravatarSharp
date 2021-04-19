@@ -3,10 +3,11 @@ using System.Text;
 
 namespace GravatarSharp.Core
 {
-    internal class Hashing
+    public class Hashing
     {
         /// <summary>
-        /// Calculate the hash based on this MSDN post: http://blogs.msdn.com/b/csharpfaq/archive/2006/10/09/how-do-i-calculate-a-md5-hash-from-a-string_3f00_.aspx
+        ///     Calculate the hash based on this MSDN post:
+        ///     http://blogs.msdn.com/b/csharpfaq/archive/2006/10/09/how-do-i-calculate-a-md5-hash-from-a-string_3f00_.aspx
         /// </summary>
         /// <param name="input">The input to hash</param>
         /// <returns>The hashed and lowered string</returns>
@@ -19,10 +20,7 @@ namespace GravatarSharp.Core
 
             // step 2, convert byte array to hex string
             var sb = new StringBuilder();
-            foreach (var t in hash)
-            {
-                sb.Append(t.ToString("X2"));
-            }
+            foreach (var t in hash) sb.Append(t.ToString("X2"));
             return sb.ToString().ToLower();
         }
     }

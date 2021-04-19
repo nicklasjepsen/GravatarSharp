@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Runtime.Remoting.Messaging;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using GravatarSharp.Core.Json;
 using GravatarSharp.Core.Model;
@@ -15,24 +9,24 @@ using Newtonsoft.Json;
 namespace GravatarSharp.Core
 {
     /// <summary>
-    /// Get a Gravatar user profile and a Gravatar image url by using this class.
+    ///     Get a Gravatar user profile and a Gravatar image url by using this class.
     /// </summary>
     public class GravatarController
     {
         /// <summary>
-        /// The user agent used in the HTTP request headers
+        ///     The user agent used in the HTTP request headers
         /// </summary>
-        public string UserAgent => string.Format("GravatarSharp/1.0 ({0}; {1})",
-            Environment.OSVersion.Platform, Environment.OSVersion.VersionString);
+        public string UserAgent =>
+            $"GravatarSharp/1.0 ({Environment.OSVersion.Platform}; {Environment.OSVersion.VersionString})";
 
         /// <summary>
-        /// Gets the Gravatar profile for the given user/email
+        ///     Gets the Gravatar profile for the given user/email
         /// </summary>
         /// <param name="email">The email that will be used to request the user profile</param>
         /// <returns>The user profile corresponding to the provided email address</returns>
         public async Task<GetProfileResult> GetProfile(string email)
         {
-            var json = await GetStringResponse(string.Format("https://en.gravatar.com/{0}.json", Hashing.CalculateMd5Hash(email)));
+            var json = await GetStringResponse($"https://en.gravatar.com/{Hashing.CalculateMd5Hash(email)}.json");
             if (string.IsNullOrEmpty(json.ErrorMessage))
                 return new GetProfileResult
                 {
@@ -45,20 +39,14 @@ namespace GravatarSharp.Core
         }
 
         /// <summary>
-        /// Gets the Gravatar image url for the given user/email
+        ///     Gets the Gravatar image url for the given user/email
         /// </summary>
         /// <param name="email">The email that will be used to request the user image url</param>
         /// <param name="width">The width in pixels. Default is 128</param>
         /// <returns>The image url corresponding to the provided email address</returns>
         public static string GetImageUrl(string email, int width = 128)
         {
-            return string.Format("http://www.gravatar.com/avatar/{0}?s={1}&d=identicon&r=PG", Hashing.CalculateMd5Hash(email), width);
-        }
-
-        private class HttpStringResponse
-        {
-            public string Result { get; set; }
-            public string ErrorMessage { get; set; }
+            return $"http://www.gravatar.com/avatar/{Hashing.CalculateMd5Hash(email)}?s={width}&d=identicon&r=PG";
         }
 
         private async Task<HttpStringResponse> GetStringResponse(string uri)
@@ -84,6 +72,12 @@ namespace GravatarSharp.Core
                     };
                 }
             }
+        }
+
+        private class HttpStringResponse
+        {
+            public string Result { get; set; }
+            public string ErrorMessage { get; set; }
         }
     }
 }

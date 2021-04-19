@@ -10,25 +10,27 @@ namespace GravatarSharp.Core.Json
             throw new NotImplementedException();
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
+            JsonSerializer serializer)
         {
-            var retVal = new Object();
+            var retVal = new object();
             switch (reader.TokenType)
             {
                 case JsonToken.StartObject:
-                    {
-                        retVal = (T)serializer.Deserialize(reader, typeof(T));
-                        break;
-                    }
+                {
+                    retVal = (T) serializer.Deserialize(reader, typeof(T));
+                    break;
+                }
                 case JsonToken.StartArray:
-                    {
-                        var arr1 = serializer.Deserialize<T[]>(reader);
-                        if (arr1 != null && arr1.Length > 0)
-                            retVal = arr1[0];
-                        else retVal = null;
-                        break;
-                    }
+                {
+                    var arr1 = serializer.Deserialize<T[]>(reader);
+                    if (arr1 != null && arr1.Length > 0)
+                        retVal = arr1[0];
+                    else retVal = null;
+                    break;
+                }
             }
+
             return retVal;
         }
 

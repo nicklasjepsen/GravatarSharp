@@ -2,10 +2,8 @@
 
 namespace GravatarSharp.Core.Json
 {
-    // ReSharper disable InconsistentNaming
-    
     /// <summary>
-    /// The Gravatar profile is based on the PoCo schema, see http://portablecontacts.net/draft-spec.html#schema
+    ///     The Gravatar profile is based on the PoCo schema, see http://portablecontacts.net/draft-spec.html#schema
     /// </summary>
     internal class Profile
     {
@@ -14,59 +12,107 @@ namespace GravatarSharp.Core.Json
 
     internal class Entry
     {
-        public string id { get; set; }
-        public string hash { get; set; }
-        public string requestHash { get; set; }
-        public string profileUrl { get; set; }
-        public string preferredUsername { get; set; }
-        public string thumbnailUrl { get; set; }
-        public Photo[] photos { get; set; }
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        [JsonProperty("hash")]
+        public string Hash { get; set; }
+
+        [JsonProperty("requestHash")]
+        public string RequestHash { get; set; }
+
+        [JsonProperty("profileUrl")]
+        public string ProfileUrl { get; set; }
+
+        [JsonProperty("preferredUsername")]
+        public string PreferredUsername { get; set; }
+
+        [JsonProperty("thumbnailUrl")]
+        public string ThumbnailUrl { get; set; }
+
+        [JsonProperty("photos")]
+        public Photo[] Photos { get; set; }
 
         [JsonConverter(typeof(SingleValueArrayConverter<Name>))]
-        [JsonProperty(Required = Required.AllowNull)]
-        public Name name { get; set; }
-        public string displayName { get; set; }
-        public string aboutMe { get; set; }
-        public string currentLocation { get; set; }
-        public Email[] emails { get; set; }
-        public Account[] accounts { get; set; }
-        public Url[] urls { get; set; }
+        [JsonProperty("name", Required = Required.AllowNull)]
+        public Name Name { get; set; }
+
+        [JsonProperty("displayName")]
+        public string DisplayName { get; set; }
+
+        [JsonProperty("aboutMe")]
+        public string AboutMe { get; set; }
+
+        [JsonProperty("currentLocation")]
+        public string CurrentLocation { get; set; }
+
+        [JsonProperty("emails")]
+        public Email[] Emails { get; set; }
+
+        [JsonProperty("accounts")]
+        public Account[] Accounts { get; set; }
+
+        [JsonProperty("urls")]
+        public Url[] Urls { get; set; }
     }
 
     internal class Name
     {
-        public string givenName { get; set; }
-        public string familyName { get; set; }
-        public string formatted { get; set; }
+        [JsonProperty("givenName")]
+        public string GivenName { get; set; }
+
+        [JsonProperty("familyName")]
+        public string FamilyName { get; set; }
+
+        [JsonProperty("formatted")]
+        public string Formatted { get; set; }
     }
 
     internal class Photo
     {
-        public string value { get; set; }
-        public string type { get; set; }
+        [JsonProperty("value")]
+        public string Value { get; set; }
+
+        [JsonProperty("type")]
+        public string Type { get; set; }
     }
 
     internal class Email
     {
-        public string primary { get; set; }
-        public string value { get; set; }
+        [JsonProperty("primary")]
+        public string Primary { get; set; }
+
+        [JsonProperty("value")]
+        public string Value { get; set; }
     }
 
     internal class Account
     {
-        public string domain { get; set; }
-        public string display { get; set; }
-        public string url { get; set; }
-        public string username { get; set; }
-        public string verified { get; set; }
-        public string shortname { get; set; }
+        [JsonProperty("domain")]
+        public string Domain { get; set; }
+
+        [JsonProperty("display")]
+        public string Display { get; set; }
+
+        [JsonProperty("url")]
+        public string Url { get; set; }
+
+        [JsonProperty("username")]
+        public string Username { get; set; }
+
+        [JsonProperty("verified")]
+        public string Verified { get; set; }
+
+        [JsonProperty("shortname")]
+        public string ShortName { get; set; }
     }
 
     internal class Url
     {
+        [JsonProperty("value")]
         public string value { get; set; }
+
+        [JsonProperty("title")]
         public string title { get; set; }
     }
-
-    // ReSharper restore InconsistentNaming
 }
