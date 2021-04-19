@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
     AssemblyDescription(
         "A very simple API to get a gravatar image from an email addres. Also provides the full user profile based on the email and enables the consumer to get a custom sized user image by calling a single method.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SystemOut")]
+[assembly: AssemblyCompany("cloud-externals.com")]
 [assembly: AssemblyProduct("GravatarSharp")]
-[assembly: AssemblyCopyright("Copyright © SystemOut 2015")]
+[assembly: AssemblyCopyright("Copyright © Nicklas Møller Jepsen 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,5 +33,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.3.0.2")]
-[assembly: AssemblyFileVersion("0.1.0.0")]
+[assembly: AssemblyVersion("0.9.0.2")]
+[assembly: AssemblyFileVersion("0.9.0.0")]
