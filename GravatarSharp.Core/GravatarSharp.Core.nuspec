@@ -1,18 +1,25 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>$author$</authors>
-    <owners>$author$</owners>
-    <projectUrl>https://github.com/nicklasjepsen/GravatarSharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/nicklasjepsen/GravatarSharp</projectUrl>
     <description>$description$</description>
-    <releaseNotes>Just some pratical changes - icon, license and stuff.</releaseNotes>
-	<licenseUrl>https://github.com/nicklasjepsen/GravatarSharp/blob/master/License.txt</licenseUrl>
-    <copyright>Copyright 2015 Nicklas Møller Jepsen</copyright>
+    <releaseNotes>Update to enforce injection of HttpClient.</releaseNotes>
+    <copyright>$copyright$</copyright>
     <tags>Gravatar</tags>
-	<iconUrl>http://systemout.net/images/Gravatar-icon.png</iconUrl>
+	<icon>icon.png</icon>
+	
+	<dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
+	
   </metadata>
+  <files>
+    <file src="icon.png" target="" />
+  </files>
 </package>
