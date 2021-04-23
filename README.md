@@ -23,3 +23,5 @@ This profile provides various information that the user has entered, for instanc
   
 ## Read more
 [Here](https://blog.jepsen.ninja/gravatar-c-api) is a blog post about this library.
+
+And [here](https://blog.jepsen.ninja/getting-a-users-gravatar-data-using-azure-functions) is an article on how to use the library in a Azure Function.
