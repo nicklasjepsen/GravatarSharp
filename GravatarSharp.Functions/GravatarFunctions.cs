@@ -1,6 +1,5 @@
 using System.Net.Http;
 using System.Threading.Tasks;
-using GravatarSharp.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;

@@ -5,13 +5,14 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
-    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.4" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.14" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.14" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GravatarSharp.Core\GravatarSharp.Core.csproj" />
+    <ProjectReference Include="..\GravatarSharp\GravatarSharp.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
