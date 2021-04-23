@@ -1,3 +1,16 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=alert_status)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=security_rating)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=sqale_index)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=bugs)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=coverage)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=code_smells)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=nicklasjepsen_GravatarSharp&metric=ncloc)](https://sonarcloud.io/dashboard?id=nicklasjepsen_GravatarSharp)
+
 # GravatarSharp
 A very simple API for interacting with Gravatar using C#
 
