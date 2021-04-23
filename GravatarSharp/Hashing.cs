@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace GravatarSharp
@@ -16,8 +17,12 @@ namespace GravatarSharp
         /// <returns>The hashed and lowered string</returns>
         public static string CalculateMd5Hash(string input)
         {
+            if (input == null)
+                throw new InvalidOperationException("The input parameter is required.");
             // step 1, calculate MD5 hash from input
+#pragma warning disable SCS0006 // Weak hashing function.
             var md5 = MD5.Create();
+#pragma warning restore SCS0006 // Weak hashing function.
             var inputBytes = Encoding.ASCII.GetBytes(input);
             var hash = md5.ComputeHash(inputBytes);
 
