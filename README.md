@@ -21,3 +21,5 @@ You can get the Gravatar user profile:
   
 This profile provides various information that the user has entered, for instance name, location and other handy stuff.
   
+## Read more
+[Here](https://blog.jepsen.ninja/gravatar-c-api) is a blog post about this library.
