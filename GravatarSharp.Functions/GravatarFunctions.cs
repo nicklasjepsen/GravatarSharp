@@ -1,3 +1,4 @@
+using System.Net.Http;
 using System.Threading.Tasks;
 using GravatarSharp.Core;
 using Microsoft.AspNetCore.Http;
@@ -5,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
+using Microsoft.WindowsAzure.Storage.Blob;
 using Newtonsoft.Json;
 
 namespace GravatarSharp.Functions
@@ -29,6 +31,20 @@ namespace GravatarSharp.Functions
 
             var result = await gravatar.GetProfile(email);
             return new OkObjectResult(JsonConvert.SerializeObject(result));
+        }
+
+        [FunctionName("Function1")]
+        public async Task Run(
+            [QueueTrigger("gravatar-queue", Connection = "StorageConnectionString")] string email,
+            [Blob("gravatar-images", Connection = "StorageConnectionString")] CloudBlobContainer outputContainer,
+            ILogger log)
+        {
+            var result = await gravatar.GetProfile(email);
+
+            // You probably don't want to do this in a production scenario as it makes a request against the storage account
+            await outputContainer.CreateIfNotExistsAsync();
+            var cloudBlockBlob = outputContainer.GetBlockBlobReference(result.Profile.Id);
+            await cloudBlockBlob.UploadFromStreamAsync(await new HttpClient().GetStreamAsync(result.Profile.ImageThumbUrl));
         }
     }
 }
