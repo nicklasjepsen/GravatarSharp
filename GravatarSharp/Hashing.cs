@@ -6,7 +6,7 @@ namespace GravatarSharp
     /// <summary>
     /// Used to calculate the hash
     /// </summary>
-    public class Hashing
+    public static class Hashing
     {
         /// <summary>
         ///     Calculate the hash based on this MSDN post:
