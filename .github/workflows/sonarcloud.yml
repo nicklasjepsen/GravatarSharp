@@ -7,8 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1.8
+        with:
+          dotnet-version: 3.1.x
+      - name: Build and test
+        run: dotnet build --configuration Release
       - name: SonarCloud Analysis
-        uses: SonarSource/sonarcloud-github-action@v1.8
+        uses: sonarsource/sonarcloud-github-action@v1
         with:
           organization: nicklasjepsen
           token: ${{ secrets.SONAR_TOKEN }}
