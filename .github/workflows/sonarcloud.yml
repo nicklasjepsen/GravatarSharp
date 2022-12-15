@@ -1,0 +1,14 @@
+name: SonarCloud
+
+on: [push]
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: SonarCloud Analysis
+        uses: sonarsource/sonarcloud-github-action@v1
+        with:
+          organization: nicklasjepsen
+          token: ${{ secrets.SONAR_TOKEN }}
