@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: SonarCloud Analysis
-        uses: sonarsource/sonarcloud-github-action@v1
+        uses: SonarSource/sonarcloud-github-action@v1.8
         with:
           organization: nicklasjepsen
           token: ${{ secrets.SONAR_TOKEN }}
